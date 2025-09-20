@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    width: 100%;
+    position: relative;
+}
+header{
+    background: url(resources/background-image@2x.png) fixed no-repeat;
+    width:100%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    font-size: 1.8rem;
+    color: #fff;
+}
+.items{
+    text-transform: uppercase;
+    color: #fff;
+    background-color:#1D1D1F;
+    font-size: 1rem;
+    margin-left: 10px;
+    padding: 0.5em;
+    font-weight: 500;
+    border-radius: 20px;
+}
+.product-sec{
+    background-color:#E5E7EB;
+    padding: 1.5em;
+    margin: 1em;
+    border-radius: 20px;
+    display: grid;
+    gap: 25px;
+}
+.product-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.product-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-image img{
+    width: 100%;
+    object-fit: cover;
+}
+.product-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.name, .color, .quantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.x , .close{
+    color: #394150;
+}
+
+.form-sec{
+    margin: 0 0 2em;
+    display: flex;
+    justify-content: space-between;
+}
+input[type="text"]{
+    width: 75%;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #999;
+}
+button[type="button"]{
+    width: 22%;
+    padding: 1em;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+.cost{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.shade-title, .shade-price{
+    color: #394150;
+}
+.title, .price, .model{
+    font-weight: 600;
+}
