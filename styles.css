@@ -10,12 +10,19 @@ body{
 }
 header{
     background: url(resources/background-image@2x.png) fixed no-repeat;
+    background-size: cover;
     width:100%;
     height: 200px;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+.txt{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: -50px;
 }
 header h1{
     font-size: 1.8rem;
@@ -25,19 +32,25 @@ header h1{
     text-transform: uppercase;
     color: #fff;
     background-color:#1D1D1F;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-left: 10px;
     padding: 0.5em;
     font-weight: 500;
     border-radius: 20px;
 }
+main{
+    margin: 0 auto;
+    position: relative;
+    top: -90px;
+}
 .product-sec{
     background-color:#E5E7EB;
     padding: 1.5em;
-    margin: 1em;
-    border-radius: 20px;
+    margin: 1em 1em 0;
+    border-radius: 20px 20px 0 0;
     display: grid;
     gap: 25px;
+    
 }
 .product-list{
     display: flex;
@@ -79,21 +92,23 @@ header h1{
     margin: 0 0 2em;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
-input[type="text"]{
+.coupon-bar{
     width: 75%;
     padding: 1em;
     border: none;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #999;
 }
-button[type="button"]{
-    width: 22%;
+button[type="button"],
+button[type="submit"]{
     padding: 1em;
     background-color: black;
     color: #fff;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 .cost{
     display: flex;
@@ -102,7 +117,76 @@ button[type="button"]{
 }
 .shade-title, .shade-price{
     color: #394150;
+    font-weight: 500;
 }
 .title, .price, .model{
     font-weight: 600;
+}
+
+.contact{
+    padding:1.5em;
+    margin:0 1em;
+    background-color:#fff;
+}
+h2{
+    font-size: 1rem;
+    font-weight: 500;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 2em;
+}
+.form-title{
+    color: #1D1D1F;
+}
+.location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+#country, #postal-code{
+    display: block;
+}
+#country, #country input{
+    min-width: 170px;
+}
+input,select{
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color:#f3f4f6;
+}
+button[type="submit"]{
+    margin-top: 1em;
+}
+input::placeholder, select{
+    font-size: 0.rem;
+    color: #394150;
+}
+input:focus, select:focus{
+    outline: none;
+}
+@media screen and (min-width:1024px) {
+    main{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+    }
+    .product-sec{
+        background-color:#E5E7EB;
+        padding: 1.5em;
+        margin: 0;
+        border-radius: 20px 0 0 20px;
+    }
+    .contact{
+        padding:1.5em;
+        margin:0;
+        background-color:#fff;
+        border-radius: 0 20px 20px 0;
+    }
 }
