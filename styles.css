@@ -164,7 +164,7 @@ button[type="submit"]{
     margin-top: 1em;
 }
 input::placeholder, select{
-    font-size: 0.rem;
+    font-size: 0.9rem;
     color: #394150;
 }
 input:focus, select:focus{
